@@ -1,42 +1,46 @@
 ﻿@model MvcContactos.Models.Contactos
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles de Contacto";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Contactos</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Apellido)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Apellido)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefono)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Telefono)
-        </dd>
-    </dl>
+<h2>Detalles de Contacto</h2>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading detalle">
+                <h4>Contactos</h4>
+            </div>
+            <dl class="dl-horizontal panel-body ce">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nombre):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Apellido):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Apellido)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Telefono):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Telefono)
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+<a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id"><span class="glyphicon glyphicon-pencil"></span> Edit</a> 
+<a class="btn btn-default" asp-action="Index"><span class="glyphicon glyphicon-arrow-left"></span> Volver Lista Contactos</a>
